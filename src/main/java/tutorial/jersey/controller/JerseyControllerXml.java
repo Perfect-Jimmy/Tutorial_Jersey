@@ -39,7 +39,7 @@ public class JerseyControllerXml {
 		return user;
 	}
 	
-	//返回单节点xml
+	//返回Json
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)  
 	@Path("/getUserJson")

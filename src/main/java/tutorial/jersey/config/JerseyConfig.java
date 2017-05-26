@@ -12,9 +12,8 @@ import tutorial.jersey.controller.JerseyControllerXml;
 @ApplicationPath("/rest")
 public class JerseyConfig extends ResourceConfig {
 	 public JerseyConfig() {
-	        register(JerseyController.class);//返回json格式
-	        register(JerseyControllerXml.class);//返回xml格式
-	        
-   	      //packages("com.vergilyn.demo.springboot.jersey"); // 通过packages注册。
-	    }
+        register(JerseyController.class);//返回json格式
+        register(JerseyControllerXml.class);//返回xml格式
+        //packages("com.vergilyn.demo.springboot.jersey"); // 通过packages注册。
+     }
 }

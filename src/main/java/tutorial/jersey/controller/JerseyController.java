@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Path("/jersey")
 public class JerseyController {
+	
 	    @GET
 	    @Path("get")
 	    //定义请求的媒体类型，如果不指定，则容器默认可接受任意媒体类型，容器负责确认被调用的方法可接受HTTP请求的媒体类型，否则返回415 Unsupported Media Type
@@ -37,9 +38,9 @@ public class JerseyController {
 	    }
 
 	    @GET
-	    @Path("/getXML/{param1}/{param2}")
+	    @Path("/get/{param1}/{param2}")
 	    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-	    @Produces(MediaType.APPLICATION_XML)
+	    @Produces(MediaType.APPLICATION_JSON)
 	    public String getMessageStr(@PathParam("param2")String userName,@DefaultValue("china")@QueryParam("address")String address) {
 	    	System.out.println(address+"-==============");
 	    	String str = "hello " + userName+"-"+address;
